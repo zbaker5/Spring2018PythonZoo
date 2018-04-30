@@ -6,12 +6,12 @@ from .models import Zoo, Exhibit, Animal, Neighbor
 
 
 class ZooAdmin(admin.ModelAdmin):
-	list_display = ('name', 'id')
+	list_display = ('name', 'id', 'logoFileName', 'get_absolute_url')
 
 admin.site.register(Zoo, ZooAdmin)
 
 class ExhibitAdmin(admin.ModelAdmin):
-	list_display = ('name', 'zoo', 'animals', 'id')
+	list_display = ('name', 'zoo', 'animals', 'get_absolute_url', 'id')
 
 admin.site.register(Exhibit, ExhibitAdmin)
 
