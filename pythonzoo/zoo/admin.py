@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Zoo, Exhibit, Animal, Neighbor
+from .models import Zoo, Exhibit, Animal, ExhibitNeighbor
 
 # Register your models here.
 
@@ -11,16 +11,16 @@ class ZooAdmin(admin.ModelAdmin):
 admin.site.register(Zoo, ZooAdmin)
 
 class ExhibitAdmin(admin.ModelAdmin):
-	list_display = ('name', 'zoo', 'animals', 'get_absolute_url', 'id')
+	list_display = ('name', 'zoo', 'get_absolute_url', 'id')
 
 admin.site.register(Exhibit, ExhibitAdmin)
 
 class AnimalAdmin(admin.ModelAdmin):
-	list_display = ('name', 'exhibit', 'zoo', 'id')
+	list_display = ('name', 'exhibit', 'get_absolute_url', 'imageFileName', 'zoo', 'id')
 
 admin.site.register(Animal, AnimalAdmin)	
 
-class NeighborAdmin(admin.ModelAdmin):
+class ExhibitNeighborAdmin(admin.ModelAdmin):
 	list_display = ('toExhibit', 'fromExhibit', 'direction', 'id')
 	
-admin.site.register(Neighbor, NeighborAdmin)
+admin.site.register(ExhibitNeighbor, ExhibitNeighborAdmin)

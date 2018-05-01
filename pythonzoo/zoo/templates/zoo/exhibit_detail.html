@@ -1,10 +1,17 @@
 {% extends "base_generic.html" %}
 
-{% block title %}<title>Zoo</title>{% endblock %}
+{% block title %}<title>Exhibit</title>{% endblock %}
 
 
 {% block content %}
 
 <h1><u>Exhibit Detail for id - {{exhibit.id}} - {{exhibit.name}} located in {{exhibit.zoo.name}}</u></h1>
+
+<h1>Neighbors</h1>
+
+<h1>Animals</h1>
+{% for animal in exhibit.Exhibit.all %}
+	<p>{{animal.name}}</p>
+{% endfor %}
 
 {% endblock %}

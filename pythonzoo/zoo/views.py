@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
 
-from .models import Zoo, Exhibit
+from .models import Zoo, Exhibit, Animal
 
 # Create your views here.
 
@@ -18,3 +18,9 @@ class ZooDetailView(generic.DetailView):
     
 class ExhibitDetailView(generic.DetailView):
 	model = Exhibit
+	
+class AnimalDetailView(generic.DetailView):
+	model = Animal
+	
+#class AboutView(generic.DetailView):
+

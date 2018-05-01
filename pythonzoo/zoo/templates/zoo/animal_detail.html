@@ -1,0 +1,10 @@
+{% extends "base_generic.html" %}
+
+{% block title %}<title>Animal</title>{% endblock %}
+
+
+{% block content %}
+
+<h1><u>Animal Detail for id - {{animal.id}} - {{animal.name}} located in {{animal.exhibit}} in {{animal.exhibit.zoo}}</u></h1>
+
+{% endblock %}
