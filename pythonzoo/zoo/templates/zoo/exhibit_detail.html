@@ -8,6 +8,9 @@
 <h1><u>Exhibit Detail for id - {{exhibit.id}} - {{exhibit.name}} located in {{exhibit.zoo.name}}</u></h1>
 
 <h1>Neighbors</h1>
+{% for neighbor in exhibit.fromExhibit.all %}
+	<p>{{neighbor.direction}} to {{neighbor.toExhibit.name}}</p>
+{% endfor %}
 
 <h1>Animals</h1>
 {% for animal in exhibit.Exhibit.all %}

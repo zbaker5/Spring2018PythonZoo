@@ -5,22 +5,23 @@ from .models import Zoo, Exhibit, Animal
 
 # Create your views here.
 
-def index(request):
+def aboutus(request):
 	temporaryData = "Zach"
 	return render(
 		request,
-		"index.html",
-		context = { 'temporaryData' : temporaryData }
+		"zoo/aboutus.html",
+		context = {  },
 	)	
 
 class ZooDetailView(generic.DetailView):
     model = Zoo
+    
+class ZooListView(generic.ListView):
+	model = Zoo    
     
 class ExhibitDetailView(generic.DetailView):
 	model = Exhibit
 	
 class AnimalDetailView(generic.DetailView):
 	model = Animal
-	
-#class AboutView(generic.DetailView):
 

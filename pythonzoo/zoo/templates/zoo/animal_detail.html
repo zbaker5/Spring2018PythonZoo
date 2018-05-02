@@ -7,4 +7,8 @@
 
 <h1><u>Animal Detail for id - {{animal.id}} - {{animal.name}} located in {{animal.exhibit}} in {{animal.exhibit.zoo}}</u></h1>
 
+<h1>Image</h1>
+{% load static %}
+<img src='{% static animal.imageFileName %}'>
+
 {% endblock %}

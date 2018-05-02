@@ -31,8 +31,8 @@ class Animal(models.Model):
 	soundFileName = models.CharField(max_length=200, help_text="Enter the sound file path", null=True)
 	exhibit = models.ForeignKey('Exhibit', on_delete=models.SET_NULL, null=True, related_name = 'Exhibit', blank=True)
 	zoo = models.ForeignKey('Zoo', on_delete=models.SET_NULL, null=True)
-	habitatDescription = models.CharField(max_length=200, help_text="Enter a description of the habitat.", null=True)
-	dietDescription = models.CharField(max_length=200, help_text="Enter a description of the animal's diet.", null=True)
+	habitatDescription = models.TextField(help_text="Enter a description of the habitat.", blank=True, null=True)
+	dietDescription = models.TextField(help_text="Enter a description of the animal's diet.", blank=True, null=True)
 	
 	def __str__(self):
 		return self.name
