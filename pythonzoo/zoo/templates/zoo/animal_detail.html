@@ -1,14 +1,16 @@
 {% extends "base_generic.html" %}
 
-{% block title %}<title>Animal</title>{% endblock %}
+{% block title %}<title>{{ animal.name }}</title>{% endblock %}
 
 
 {% block content %}
 
 <h1><u>Animal Detail for id - {{animal.id}} - {{animal.name}} located in {{animal.exhibit}} in {{animal.exhibit.zoo}}</u></h1>
 
-<h1>Image</h1>
+<h3>Image</h3>
 {% load static %}
-<img src='{% static animal.imageFileName %}'>
+<img class='animal' src='{% static animal.imageFileName %}'>
+<p>{{ animal.habitatDescription }}</p>
+<p>{{ animal.dietDescription }}</p>
 
 {% endblock %}

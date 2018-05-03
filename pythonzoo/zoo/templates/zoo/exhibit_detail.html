@@ -9,12 +9,12 @@
 
 <h1>Neighbors</h1>
 {% for neighbor in exhibit.fromExhibit.all %}
-	<p>{{neighbor.direction}} to {{neighbor.toExhibit.name}}</p>
+	<p><a href='{{ toExhibit.id }}'>{{neighbor.direction}} to {{neighbor.toExhibit.name}}</a></p>
 {% endfor %}
 
 <h1>Animals</h1>
 {% for animal in exhibit.Exhibit.all %}
-	<p>{{animal.name}}</p>
+	<p><a href='/zoo/animal/{{animal.id}}'>{{animal.name}}</a></p>
 {% endfor %}
 
 {% endblock %}

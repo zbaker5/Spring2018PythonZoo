@@ -12,7 +12,15 @@ def aboutus(request):
 		"zoo/aboutus.html",
 		context = {  },
 	)	
-
+	
+def contactus(request):
+	temporaryData = "Zach"
+	return render(
+		request,
+		"zoo/contactus.html",
+		context = {  },
+	)
+	
 class ZooDetailView(generic.DetailView):
     model = Zoo
     
@@ -21,7 +29,7 @@ class ZooListView(generic.ListView):
     
 class ExhibitDetailView(generic.DetailView):
 	model = Exhibit
-	
+		
 class AnimalDetailView(generic.DetailView):
 	model = Animal
 

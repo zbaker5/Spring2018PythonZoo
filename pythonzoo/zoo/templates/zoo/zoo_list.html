@@ -6,8 +6,9 @@
 {% block content %}
 
 <h1><u>Zoo List</u></h1>
+{% load static %}
 {% for zoo in zoo_list %}
-	<p>{{ zoo.name }}</p>
+	<p><a href='{{ zoo.id }}'>{{ zoo.name }}<img src='{% static zoo.logoFileName %}'></a></p>
 {% endfor %}
 
 {% endblock %}
