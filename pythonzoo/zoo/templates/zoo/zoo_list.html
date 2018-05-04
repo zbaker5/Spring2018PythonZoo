@@ -5,10 +5,10 @@
 
 {% block content %}
 
-<h1><u>Zoo List</u></h1>
+<h1 class='topmargin'>Zoo List</h1>
 {% load static %}
 {% for zoo in zoo_list %}
-	<p><a href='{{ zoo.id }}'>{{ zoo.name }}<img src='{% static zoo.logoFileName %}'></a></p>
+	<p><a href='{{ zoo.id }}'>{{ zoo.name }} <img class='zooimg' src='{% static zoo.logoFileName %}'></a></p>
 {% endfor %}
 
 {% endblock %}

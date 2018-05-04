@@ -1,14 +1,34 @@
-h1 {
+.navigation {
+	width: 400px;
+	font-size: 2.5em;
+	margin: 15px;
 	color: white;
-	background-color: black;
-	padding: 15px;
-	text-align: center;
+	margin-right: 0px;
+}
+
+.headerlinks {
+	float: right;
+	color: white;
+	padding: 0px 0px 0px 10px;
+	margin: 25px 25px 10px 0px; 
+}
+
+.header {
 	border: 3px solid white;
+	border-radius: 15px;
+	background-color: black;
+	position: fixed;
+	width: 99.5%;
+	top: 0;
+}
+
+.link {
+	color: white;
+	font-size: 1.35em;
 }
 
 body {
 	background-color: #001145;
-	border: 3px solid blue;
 }
 
 p {
@@ -16,8 +36,66 @@ p {
 	text-align: center;
 	background-color: black;
 	font-size: 1.5em;
+	width: 75%;
+	margin: 25px 16% 45px 16%;
+	border: 3px solid white;
+	border-radius: 15px;
 }
 
 .animal {
 	width: 350px;
+	margin: 15px 36.2%;
+	display: inline-block;
+	border-radius: 15px;
 }
+
+.animalname {
+	font-size: 2.5em;
+	text-align: center;
+	margin: 10px 42.5%;
+	color: white;
+}
+
+button {
+	float: left;
+	padding: 10px;
+	display: inline;
+	border: 3px solid white;
+	border-radius: 15px;
+	color: white;
+	background-color: black;
+	margin: 8% 39.5% 15px 39.5%;
+}
+
+.intro {
+	margin-top: 15px;
+	color: white;
+	font-size: 1.75em;
+	text-align: center;
+}
+
+.descriptionheader {
+	color: white;
+	font-size: 1.5em;
+	text-align: center;
+	margin-left: 16%;
+}
+
+a {
+	color: white;
+	font-size: 1.35em;
+}
+
+.zooimg {
+	width: 250px;
+	padding-left: 15px;
+}
+
+.topmargin {
+	margin-top: 8%;
+	padding: 10px;
+	color: white;
+	text-align: center;
+}
+
+

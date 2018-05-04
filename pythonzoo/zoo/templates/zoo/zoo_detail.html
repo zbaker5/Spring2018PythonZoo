@@ -5,9 +5,7 @@
 
 {% block content %}
 
-<h1><u>Zoo Detail for {{zoo.id}} - {{zoo.name}}</u></h1>
-
-<h1><u>Exhibit List</u></h1>
+<h1 class='topmargin'>Exhibit List</h1>
 {% for exhibit in zoo.exhibit_set.all %}
 	<p><a href='/zoo/exhibit/{{ exhibit.id }}'>{{ exhibit.name }}</a></p>
 {% endfor %}

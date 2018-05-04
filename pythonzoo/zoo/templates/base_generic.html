@@ -15,8 +15,12 @@
 </head>
 
 <body>
-	<h1>Navigation Bar</h1>
-	<p><a href='/zoo'>Home</a></p><p><a href='/zoo/contactus'>Contact Us</p></a><a href='/zoo/aboutus'><p>About Us</p></a>
+	<div class='header'>
+		<label class='navigation'>Navigation Bar</label>
+		<label class='headerlinks'><a class='link' href='/zoo/contactus'>Contact Us</a></label>
+		<label class='headerlinks'><a class='link' href='/zoo/aboutus'>About Us</a></label>
+		<label class='headerlinks'><a class='link' href='/zoo'>Home</a></label>
+	</div>
 	{% block content %}	{% endblock %}
 </body>
 
