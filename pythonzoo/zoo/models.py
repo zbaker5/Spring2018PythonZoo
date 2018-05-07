@@ -28,11 +28,10 @@ class Exhibit(models.Model):
 class Animal(models.Model):
 	name = models.CharField(max_length=200, help_text="Enter an Animal Name")
 	imageFileName = models.CharField(max_length=200, help_text="Enter the image file path", null=True)
-	soundFileName = models.CharField(max_length=200, help_text="Enter the sound file path", null=True)
 	exhibit = models.ForeignKey('Exhibit', on_delete=models.SET_NULL, null=True, related_name = 'Exhibit', blank=True)
-	zoo = models.ForeignKey('Zoo', on_delete=models.SET_NULL, null=True)
 	habitatDescription = models.TextField(help_text="Enter a description of the habitat.", blank=True, null=True)
 	dietDescription = models.TextField(help_text="Enter a description of the animal's diet.", blank=True, null=True)
+	ageDescription = models.CharField(max_length=200, help_text="Enter a description of the animal's average life span.", blank=True, null=True)
 	
 	def __str__(self):
 		return self.name

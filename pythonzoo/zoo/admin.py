@@ -16,7 +16,7 @@ class ExhibitAdmin(admin.ModelAdmin):
 admin.site.register(Exhibit, ExhibitAdmin)
 
 class AnimalAdmin(admin.ModelAdmin):
-	list_display = ('name', 'exhibit', 'get_absolute_url', 'imageFileName', 'zoo', 'id')
+	list_display = ('name', 'exhibit', 'get_absolute_url', 'imageFileName', 'id')
 
 admin.site.register(Animal, AnimalAdmin)	
 

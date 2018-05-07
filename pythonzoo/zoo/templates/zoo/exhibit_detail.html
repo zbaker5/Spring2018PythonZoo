@@ -5,16 +5,26 @@
 
 {% block content %}
 
-<h1><u>Exhibit Detail for id - {{exhibit.id}} - {{exhibit.name}} located in {{exhibit.zoo.name}}</u></h1>
+<h1 class='topmargin'>Welcome to the {{ exhibit.name }} Exhibit!</h1>
+<hr>
+<div class='wrapper'>
+	{% load static %}
+	<h1 class='intro'>Animals</h1>
+	{% for animal in exhibit.Exhibit.all %}
+		<div class='animallist'>
+			<label><a href='/zoo/animal/{{animal.id}}'>{{animal.name}}<br><img class='animaltwo' src='{% static animal.imageFileName %}'></a></label>
+		</div>
+	{% endfor %}
+</div>
 
-<h1>Neighbors</h1>
-{% for neighbor in exhibit.fromExhibit.all %}
-	<p><a href='{{ neighbor.toExhibit.id }}'>{{neighbor.direction}} to {{neighbor.toExhibit.name}}</a></p>
-{% endfor %}
+<hr>
 
-<h1>Animals</h1>
-{% for animal in exhibit.Exhibit.all %}
-	<p><a href='/zoo/animal/{{animal.id}}'>{{animal.name}}</a></p>
-{% endfor %}
+<div class='wrapper'>
+	<h1 class='intro'>Exhibit Neighbors</h1>
+	{% for neighbor in exhibit.fromExhibit.all %}
+		<label class='list'><a href='{{ neighbor.toExhibit.id }}'>{{neighbor.direction}} to {{neighbor.toExhibit.name}}</a></label>
+	{% endfor %}
+</div>
+
 
 {% endblock %}

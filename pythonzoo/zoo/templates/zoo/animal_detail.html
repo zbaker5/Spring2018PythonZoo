@@ -4,10 +4,11 @@
 
 
 {% block content %}
-
-<button><a href="javascript:history.back()">Go Back to Previous Page</a></button>
-<h1 class='intro'><u>Welcome to the {{ animal.exhibit }} exhibit! This exhibit is located in {{ animal.exhibit.zoo }}</u></h1>
-
+<div class='topmargin'>
+	<button><a href="javascript:history.back()">Go Back to Previous Page</a></button>
+</div>
+<h1 class='intro'>Welcome to the {{ animal.exhibit }} exhibit! This exhibit is located in {{ animal.exhibit.zoo }}</h1>
+<hr>
 {% load static %}
 <img class='animal' src='{% static animal.imageFileName %}'>
 <label class='animalname'>{{ animal.name }}</label>
@@ -16,5 +17,7 @@
 <p>{{ animal.habitatDescription }}</p>
 <label class='descriptionheader'>Diet: </label>
 <p>{{ animal.dietDescription }}</p>
+<label class='descriptionheader'>Life Expectancy: </label>
+<p>{{ animal.ageDescription }}</p>
 
 {% endblock %}

@@ -1,7 +1,7 @@
 .navigation {
 	width: 400px;
 	font-size: 2.5em;
-	margin: 15px;
+	margin: 10px;
 	color: white;
 	margin-right: 0px;
 }
@@ -10,15 +10,14 @@
 	float: right;
 	color: white;
 	padding: 0px 0px 0px 10px;
-	margin: 25px 25px 10px 0px; 
+	margin: 20px 25px 10px 0px; 
 }
 
 .header {
-	border: 3px solid white;
-	border-radius: 15px;
-	background-color: black;
+	border-bottom: 3px solid white;
+	background-image: url(../images/background1.jpg);
 	position: fixed;
-	width: 99.5%;
+	width: 100%;
 	top: 0;
 }
 
@@ -28,13 +27,13 @@
 }
 
 body {
-	background-color: #001145;
+	background-image: url(../images/background2.jpg);
 }
 
 p {
 	color: white;
 	text-align: center;
-	background-color: black;
+	background-image: url(../images/background1.jpg);
 	font-size: 1.5em;
 	width: 75%;
 	margin: 25px 16% 45px 16%;
@@ -44,8 +43,15 @@ p {
 
 .animal {
 	width: 350px;
-	margin: 15px 36.2%;
+	margin: 15px 32%;
 	display: inline-block;
+	border: 1px solid white;
+	border-radius: 15px;
+}
+
+.animaltwo {
+	width: 150px;
+	margin: 5px;
 	border-radius: 15px;
 }
 
@@ -57,20 +63,19 @@ p {
 }
 
 button {
-	float: left;
 	padding: 10px;
-	display: inline;
 	border: 3px solid white;
 	border-radius: 15px;
+	text-align: center;
 	color: white;
-	background-color: black;
-	margin: 8% 39.5% 15px 39.5%;
+	background-image: url(../images/background1.jpg);
+	margin-bottom: 15px;
 }
 
 .intro {
-	margin-top: 15px;
+	margin: 15px 5%;
 	color: white;
-	font-size: 1.75em;
+	font-size: 2em;
 	text-align: center;
 }
 
@@ -92,10 +97,34 @@ a {
 }
 
 .topmargin {
-	margin-top: 8%;
+	margin-top: 10%;
 	padding: 10px;
 	color: white;
 	text-align: center;
 }
 
+.animallist {
+	border: 3px solid white;
+	border-radius: 15px;
+	background-image: url(../images/background1.jpg);
+	padding: 10px;
+	display: inline-block;
+	text-align: center;
+	float: center;
+	margin-right: 10px;
+}
 
+.list {
+	border: 3px solid white;
+	border-radius: 15px;
+	background-image: url(../images/background1.jpg);
+	padding: 10px;
+	margin: 5px;
+	font-size: .75em;
+	display: inline-block;
+	text-align: center;
+}
+
+.wrapper {
+	text-align: center;
+}

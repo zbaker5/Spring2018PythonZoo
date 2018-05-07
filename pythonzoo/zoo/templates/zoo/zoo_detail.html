@@ -6,8 +6,10 @@
 {% block content %}
 
 <h1 class='topmargin'>Exhibit List</h1>
-{% for exhibit in zoo.exhibit_set.all %}
-	<p><a href='/zoo/exhibit/{{ exhibit.id }}'>{{ exhibit.name }}</a></p>
-{% endfor %}
+<div class='wrapper'>
+	{% for exhibit in zoo.exhibit_set.all %}
+		<label class='list'><a href='/zoo/exhibit/{{ exhibit.id }}'>{{ exhibit.name }}</a></label>
+	{% endfor %}
+</div>
 
 {% endblock %}
